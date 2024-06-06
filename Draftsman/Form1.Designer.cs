@@ -56,6 +56,7 @@
             btnTriangle.TabIndex = 1;
             btnTriangle.Text = "Triangle";
             btnTriangle.UseVisualStyleBackColor = true;
+            btnTriangle.Click += btnTriangle_Click;
             // 
             // btnCircle
             // 
