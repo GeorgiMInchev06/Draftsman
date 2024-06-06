@@ -94,7 +94,7 @@
             Controls.Add(btnRectangle);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Board";
-            Text = "Board";
+            Text = "Shapes";
             Load += Board_Load;
             ResumeLayout(false);
         }
