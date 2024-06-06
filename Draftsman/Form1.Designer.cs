@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Board));
             btnRectangle = new Button();
             btnTriangle = new Button();
             btnCircle = new Button();
@@ -91,6 +92,7 @@
             Controls.Add(btnCircle);
             Controls.Add(btnTriangle);
             Controls.Add(btnRectangle);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Board";
             Text = "Board";
             Load += Board_Load;
