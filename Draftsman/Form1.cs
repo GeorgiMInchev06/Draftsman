@@ -29,6 +29,12 @@ namespace Draftsman
             th2 = new Thread(TriangleThread);
             th2.Start();
         }
+        private void btnCircle_Click(object sender, EventArgs e)
+        {
+            th3 = new Thread(CircleThread);
+            th3.Start();
+        }
+
         public void RectangleThread()
         {
             Random rdm = new Random();
@@ -112,6 +118,47 @@ namespace Draftsman
 
             MessageBox.Show("Completed triangle");
         }
+        public void CircleThread()
+        {
+            Random rdm = new Random();
+            for (int i = 0; i < 100; i++)
+            {
+                int size = rdm.Next(5, 50);
+                int x = rdm.Next(0, Width - size);
+                int y = rdm.Next(0, Height - size);
+
+                Color randomColor = Color.FromArgb(rdm.Next(256), rdm.Next(256), rdm.Next(256));
+                using (Pen pen = new Pen(randomColor, 4))
+                {
+                    CreateGraphics().DrawEllipse(pen, x, y, size, size);
+                }
+
+                size = rdm.Next(5, 50);
+                x = rdm.Next(0, Width - size);
+                y = rdm.Next(0, Height - size);
+
+                randomColor = Color.FromArgb(rdm.Next(256), rdm.Next(256), rdm.Next(256));
+                using (Pen pen = new Pen(randomColor, 4))
+                {
+                    CreateGraphics().DrawEllipse(pen, x, y, size, size);
+                }
+
+                size = rdm.Next(5, 50);
+                x = rdm.Next(0, Width - size);
+                y = rdm.Next(0, Height - size);
+
+                randomColor = Color.FromArgb(rdm.Next(256), rdm.Next(256), rdm.Next(256));
+                using (Pen pen = new Pen(randomColor, 4))
+                {
+                    CreateGraphics().DrawEllipse(pen, x, y, size, size);
+                }
+
+                Thread.Sleep(100);
+            }
+
+            MessageBox.Show("Completed circle");
+        }
+
 
 
     }
