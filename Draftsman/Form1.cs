@@ -159,7 +159,10 @@ namespace Draftsman
             MessageBox.Show("Completed circle");
         }
 
-
-
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Graphics g = CreateGraphics();
+            g.Clear(DefaultBackColor);
+        }
     }
 }
