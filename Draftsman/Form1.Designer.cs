@@ -44,6 +44,7 @@
             btnRectangle.TabIndex = 0;
             btnRectangle.Text = "Rectangle";
             btnRectangle.UseVisualStyleBackColor = true;
+            btnRectangle.Click += btnRectangle_Click;
             // 
             // btnTriangle
             // 
@@ -89,6 +90,7 @@
             Controls.Add(btnRectangle);
             Name = "Board";
             Text = "Board";
+            Load += Board_Load;
             ResumeLayout(false);
         }
 
